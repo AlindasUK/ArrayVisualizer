@@ -1,23 +1,41 @@
-<!-- index.html -->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Array visualizer</title>
 </head>
+
 <body>
     <div class="center">
         <h1>Array visualizer</h1>
         <div class="circle-container" id="circle-container">
             <!-- Circles will be dynamically added here using JavaScript -->
         </div>
+
+        <div class="slider-container">
+            <label for="circle-slider">Number Count:</label>
+            <input type="range" id="circle-slider" min="1" max="21" value="16" onchange="updateCircleCount(this.value)">
+        </div>
+
+        <div class="slider-container">
+            <label for="speed-slider">Animation Speed:</label>
+            <input type="range" id="speed-slider" min="0" max="1000" value="50" onchange="updateSpeedCount(this.value)">
+        </div>
+
         <button onclick="shuffleArray()">Shuffle</button>
-        <button onclick="sortArray()">Sort</button>
+        <button onclick="sortArray('bubbleSort')">Bubble Sort</button>
+        <button onclick="sortArray('selectionSort')">Selection Sort</button>
+        <button onclick="sortArray('insertionSort')">Insertion Sort</button>
         <button onclick="findAndHighlightMin()">Find Min</button>
     </div>
+
     <script src="script.js"></script>
+    <div id="bottomLeftLink">
+        <a href="https://github.com/AlindasUK" target="_blank">Made by Alindas</a>
+    </div>
 </body>
+
 </html>
