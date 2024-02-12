@@ -35,6 +35,6 @@ Features
   Takes each element from the unsorted portion and inserts it into its correct position in the sorted portion.
 
 <h2>Developer Information</h2>
-Technologies Used
+Lanuages Used
 
   HTML, CSS, JavaScript
